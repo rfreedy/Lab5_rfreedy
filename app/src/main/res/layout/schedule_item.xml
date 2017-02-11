@@ -2,16 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <ImageView
-        android:layout_width="104dp"
-        android:layout_height="86dp"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/acc"
-        android:id="@+id/team_logo" />
+        android:id="@+id/team_logo"
+        android:adjustViewBounds="false"
+        android:scaleType="fitXY" />
 
     <EditText
-        android:layout_width="110dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Team Name"
         android:ems="10"
@@ -19,7 +22,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:layout_width="148dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"

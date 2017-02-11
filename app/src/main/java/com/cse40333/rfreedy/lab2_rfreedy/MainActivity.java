@@ -18,32 +18,14 @@ public class MainActivity extends AppCompatActivity {
         //String Colleges[] = {"Florida State", "Boston College", "North Carolina State", "Georgia Tech", "Boston College", "Louisville","ACC Tournament", "NCAA Tournament"};
 
         ArrayList Colleges = new ArrayList();
-        Colleges.add("Florida State");
-        Colleges.add("Boston College");
-        Colleges.add("North Carolina State");
-        Colleges.add("Georgia Tech");
-        Colleges.add("Boston College");
-        Colleges.add("Louisville");
-        Colleges.add("ACC Tournament");
-        Colleges.add("NCAA Tournament");
-        ArrayList Dates = new ArrayList();
-        Dates.add("Feb 11");
-        Dates.add("Feb 14");
-        Dates.add("Feb 18");
-        Dates.add("Feb 26");
-        Dates.add("March 1");
-        Dates.add("March 4");
-        Dates.add("March 7");
-        Dates.add("March 16");
-        ArrayList pictures = new ArrayList();
-        Colleges.add("florida_state.jpg");
-        Colleges.add("boston_college.png");
-        Colleges.add("north_carolina_state.png");
-        Colleges.add("georgia_tech.png");
-        Colleges.add("boston_college.png");
-        Colleges.add("louisville_pic.png");
-        Colleges.add("acc.jpg");
-        Colleges.add("ncaa.png");
+        Colleges.add(new String[]{"Florida State", "Feb 11", "florida_state"});
+        Colleges.add(new String[]{"Boston College", "Feb 14", "boston_college"});
+        Colleges.add(new String []{"North Carolina State", "Feb 18", "north_carolina_state"});
+        Colleges.add(new String[]{"Georgia Tech", "Feb 26", "georgia_tech"});
+        Colleges.add(new String[]{"Boston College", "March 1", "boston_college"});
+        Colleges.add(new String[]{"Louisville", "March 4", "louisville_pic"});
+        Colleges.add(new String[]{"ACC Tournament", "March 7", "acc"});
+        Colleges.add(new String[]{"NCAA Tournament", "March 16", "ncaa"});
 
         ScheduleAdapter collegeSchedule = new ScheduleAdapter(this, Colleges);
 
