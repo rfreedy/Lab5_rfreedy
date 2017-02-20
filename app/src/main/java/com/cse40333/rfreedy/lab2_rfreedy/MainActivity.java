@@ -11,6 +11,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import java.util.*;
 
+import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //String Colleges[] = {"Florida State", "Boston College", "North Carolina State", "Georgia Tech", "Boston College", "Louisville","ACC Tournament", "NCAA Tournament"};
+        //final String arr[] = {"Florida State", "Boston College", "North Carolina State", "Georgia Tech", "Boston College", "Louisville","ACC Tournament", "NCAA Tournament"};
 
-        final ArrayList Colleges = new ArrayList();
+        final ArrayList <String[]> Colleges = new ArrayList<String[]>();
         Colleges.add(new String[]{"Florida State", "Final", "Feb 11", "florida_state", "72-84", "Purcell Pavilion", "21-6"});
         Colleges.add(new String[]{"Boston College", "Final", "Feb 14", "boston_college", "76-84", "Boston College Stadium", "9-18"});
         Colleges.add(new String []{"North Carolina State", "Final", "Feb 18", "north_carolina_state","72-81", "NC State Stadium", "14-14"});
@@ -41,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Write code here to open the activity that will show details of the game event,i.e. if //you click on Florida State, you should see details of the match between Florida State //and Notre Dame. You need to do the following three steps.
                 //create the intent to start DetailActivity
+
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("team", Colleges.get(position));
                 startActivity(intent);
-
             }
         };
-        scheduleListView.setOnItemClickListener (clickListener);
+
+        scheduleListView.setOnItemClickListener(clickListener);
+        scheduleListView.setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS);
 
     }
 

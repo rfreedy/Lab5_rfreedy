@@ -5,7 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -25,7 +28,7 @@ public class DetailActivity extends Activity {
         super.onCreate(bundle);
         setContentView(R.layout.activity_detail);
 
-        String[] stringInfo = getIntent().getExtra();
+        String[] stringInfo = getIntent().getStringArrayExtra("team");
 
         //initialize all the widgets of your layout file here.
         TextView gameLocation = (TextView) findViewById(R.id.game_location);
@@ -50,17 +53,25 @@ public class DetailActivity extends Activity {
         //Notre Dame Logo
         ImageView notreDameLogo = (ImageView) findViewById(R.id.team_logo);
         String mDrawableName = "notredamelogo";
-        int resID = getContext().getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
+        int resID = getApplicationContext().getResources().getIdentifier(mDrawableName , "drawable", getApplicationContext().getPackageName());
         notreDameLogo.setImageResource(resID );
 
         //Opponent Logo
         ImageView opponentTeamLogo = (ImageView) findViewById(R.id.team_logo);
         String mDrawableName2 = stringInfo[3];
-        int resID2 = getContext().getResources().getIdentifier(mDrawableName2 , "drawable", getContext().getPackageName());
+        int resID2 = getApplicationContext().getResources().getIdentifier(mDrawableName2 , "drawable", getApplicationContext().getPackageName());
         opponentTeamLogo.setImageResource(resID2);
 
         //initializing the camera
-        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivity(cameraIntent);
+        Button camera =  (Button) findViewById(R.id.camera);
+        camera.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivity(cameraIntent);
+            }
+        });
+
+
+
     }
 }

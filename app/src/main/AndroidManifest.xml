@@ -5,9 +5,10 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/notredamelogo"
-        android:label="Lab4"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
         <activity android:name="SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
