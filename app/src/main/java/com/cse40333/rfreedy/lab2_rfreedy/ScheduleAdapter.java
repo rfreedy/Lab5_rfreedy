@@ -26,9 +26,9 @@ class ScheduleAdapter extends ArrayAdapter<String[]> {
         TextView teamName = (TextView) scheduleView.findViewById(R.id.team_name);
         TextView dateName = (TextView) scheduleView.findViewById(R.id.game_date);
         teamName.setText(matchItem[0]);
-        dateName.setText(matchItem[1]);
+        dateName.setText(matchItem[2]);
         ImageView teamLogo = (ImageView) scheduleView.findViewById(R.id.team_logo);
-        String mDrawableName = matchItem[2];
+        String mDrawableName = matchItem[3];
         int resID = getContext().getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
         teamLogo.setImageResource(resID );
         return scheduleView;

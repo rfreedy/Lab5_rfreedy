@@ -12,7 +12,7 @@
         android:ems="10"
         android:id="@+id/game_location"
         android:layout_width="wrap_content"
-        android:textSize="36sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -20,11 +20,12 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/date"
-        android:textSize="36sp" />
+        android:textSize="24sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="412dp">
+        android:layout_height="412dp"
+        android:id="@+id/relative_layout">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -51,7 +52,7 @@
             android:inputType="textPersonName"
             android:text="final"
             android:ems="10"
-            android:id="@+id/editText4"
+            android:id="@+id/outcome"
             android:layout_marginTop="14dp"
             android:textSize="30sp"
             android:textAlignment="center"
@@ -70,23 +71,51 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/notre_dame_image"
-            android:layout_alignStart="@+id/score"
-            android:id="@+id/opponent_record"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/notre_dame_image"
-            android:layout_alignEnd="@+id/editText4"
+            android:layout_alignEnd="@+id/outcome"
             android:layout_marginEnd="15dp"
             android:id="@+id/notre_dame_record"
             android:textSize="18sp"
             android:text="(21-7)" />
+
+        <Button
+            android:text="Camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/score"
+            android:layout_marginBottom="19dp"
+            android:id="@+id/camera" />
+
+        <TextView
+            android:text="Notre Dame Fighting Irish"
+            android:layout_height="50dp"
+            android:id="@+id/notre_dame_name"
+            android:textSize="18sp"
+            android:layout_width="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Opponent"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:id="@+id/opponent_name"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/opponent_image" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opponent_record"
+            android:textSize="18sp"
+            android:layout_above="@+id/score"
+            android:layout_alignEnd="@+id/opponent_image"
+            android:layout_marginEnd="18dp" />
     </RelativeLayout>
 
 </LinearLayout>
