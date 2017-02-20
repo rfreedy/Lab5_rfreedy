@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/game_location"
+        android:layout_width="wrap_content"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/date"
+        android:textSize="36sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="412dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/acc"
+            android:layout_marginEnd="254dp"
+            android:layout_marginTop="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/opponent_image" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/notredamelogo"
+            android:id="@+id/notre_dame_image"
+            android:layout_marginStart="265dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="final"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_marginTop="14dp"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_below="@+id/score"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/notre_dame_image"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/notre_dame_image"
+            android:layout_alignStart="@+id/score"
+            android:id="@+id/opponent_record"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/notre_dame_image"
+            android:layout_alignEnd="@+id/editText4"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/notre_dame_record"
+            android:textSize="18sp"
+            android:text="(21-7)" />
+    </RelativeLayout>
+
+</LinearLayout>
