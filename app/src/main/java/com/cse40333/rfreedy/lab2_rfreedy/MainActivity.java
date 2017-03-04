@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 //Write code here to open the activity that will show details of the game event,i.e. if //you click on Florida State, you should see details of the match between Florida State //and Notre Dame. You need to do the following three steps.
                 //create the intent to start DetailActivity
 
-                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                intent.putExtra("team", Colleges.get(position));
-                startActivity(intent);
+                Intent mintent = new Intent(MainActivity.this, DetailActivity.class);
+                mintent.putExtra("team", Colleges.get(position));
+                startActivity(mintent);
             }
         };
 
