@@ -14,21 +14,21 @@ import java.util.ArrayList;
  * Created by rfreedy on 2/10/2017.
  */
 
-class ScheduleAdapter extends ArrayAdapter<String[]> {
-    ScheduleAdapter (Context context, ArrayList<String[]> schedule) {
+class ScheduleAdapter extends ArrayAdapter<Team> {
+    ScheduleAdapter (Context context, ArrayList<Team> schedule) {
         super(context, R.layout.schedule_item, schedule);
     }
     public View getView (int position, View convertView, ViewGroup parent) {
         LayoutInflater scheduleInflater = LayoutInflater.from(getContext());
         View scheduleView = scheduleInflater.inflate(R.layout.schedule_item, parent, false);
 
-        String[] matchItem = getItem(position);
+        Team matchItem = getItem(position);
         TextView teamName = (TextView) scheduleView.findViewById(R.id.team_name);
         TextView dateName = (TextView) scheduleView.findViewById(R.id.game_date);
-        teamName.setText(matchItem[0]);
-        dateName.setText(matchItem[2]);
+        teamName.setText(matchItem.getOpponentName());
+        dateName.setText(matchItem.getGameDate());
         ImageView teamLogo = (ImageView) scheduleView.findViewById(R.id.team_logo);
-        String mDrawableName = matchItem[3];
+        String mDrawableName = matchItem.getOpponentLogo();
         int resID = getContext().getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
         teamLogo.setImageResource(resID );
         return scheduleView;

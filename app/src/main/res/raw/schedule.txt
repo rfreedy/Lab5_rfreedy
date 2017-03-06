@@ -1,0 +1,8 @@
+Florida State,Final,Feb 11,florida_state,72-84,Purcell Pavilion,21-6
+Boston College,Final,Feb 14,boston_college,76-84,Boston College Stadium,9-18
+North Carolina State,Final,Feb 18,north_carolina_state,72-81,NC State Stadium,14-14
+Georgia Tech,2/26,Feb 26,georgia_tech,0-0,Purcell Pavilion,16-11
+Boston College,3/1,March 1,boston_college,0-0,Purcell Pavilion,9-18
+Louisville,3/4,March 4,louisville_pic,0-0,Louisville Stadium,22-5
+ACC Tournament,3/7,March 7,acc,0-0,TBD,N/A
+NCAA Tournament,3/16,March 16,ncaa,0-0,TBD,N/A

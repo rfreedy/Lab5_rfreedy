@@ -8,15 +8,15 @@ import java.io.Serializable;
 
 public class Team implements Serializable {
 
-    String notreDameLogo;
+    String notreDameLogo = "notredamelogo";
     String opponentLogo;
     String gameLocation;
     String gameDate;
     String gameOutcome;
     String gameScore;
-    String notreDameName;
+    String notreDameName = "Notre Dame Fight Irish";
     String opponentName;
-    String notreDameRecord;
+    String notreDameRecord = "21-7";
     String opponentRecord;
 
 

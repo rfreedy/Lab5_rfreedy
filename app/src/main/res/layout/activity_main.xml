@@ -8,5 +8,8 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scheduleListView" />
+        android:id="@+id/scheduleListView"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 </LinearLayout>
